@@ -36,7 +36,7 @@ describe('darkRoom', function () {
     expect(result).toBe('BLOCK');
   });
 
-  it('returns KICK when kick is received before it is expected', function () {
+  it('returns KICK when block is too late', function () {
     var result = darkRoom(2)(1)()()()()()()().end();
     expect(result).toBe('KICK');
 
@@ -47,7 +47,7 @@ describe('darkRoom', function () {
     expect(result).toBe('KICK');
   });
 
-  it('returns KICK when kick is received after it is expected', function () {
+  it('returns KICK when block is too early', function () {
     var result = darkRoom(2)()()(1)()()()()().end();
     expect(result).toBe('KICK');
 
@@ -55,6 +55,11 @@ describe('darkRoom', function () {
     expect(result).toBe('KICK');
 
     result = darkRoom(6)()()()()()()()()()()(1)()().end();
+    expect(result).toBe('KICK');
+  });
+
+  it('returns KICK when there is no block', function () {
+    var result = darkRoom(2)()()().end();
     expect(result).toBe('KICK');
   });
 
@@ -68,5 +73,4 @@ describe('darkRoom', function () {
     result = darkRoom(2)(1)(1)(1)(1)(1)(1)(1)(1).end();
     expect(result).toBe('KICK');
   });
-
 });

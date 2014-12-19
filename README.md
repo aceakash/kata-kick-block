@@ -28,3 +28,6 @@ Good luck Grasshopper
 ###Tests
 
 Run `npm install` and then `npm test` to run the tests
+
+###Kata source
+http://www.codewars.com/kata/528aa29bd8a0399fc5000cae

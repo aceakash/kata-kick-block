@@ -1,0 +1,15 @@
+{
+  "name": "kata-kick-block",
+  "version": "0.0.1",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "author": "Akash Kurdekar <npm@kurdekar.com> (http://untilfalse.com/)",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-jasmine": "^1.0.1"
+  }
+}

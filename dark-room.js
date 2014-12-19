@@ -1,29 +1,21 @@
 module.exports = function (warnedFor) {
-  var expectedIn  = warnedFor,
-      result      = null;
+  var expectedIn = warnedFor,
+    result = null;
 
-  function chain(kick) {
+  function chain(block) {
     expectedIn--;
-    if (kick === 1) {
-      if (result) {
-        result = 'KICK';
-      }
-      else {
-        if (expectedIn === 0) {
-          result = 'BLOCK';
-        }
-        else {
-          result = 'KICK';
-        }
-      }
-    }
-
+    if (block !== 1)
+      return chain;
+    if (result)
+      result = 'KICK';
+    else if (expectedIn === 0)
+      result = 'BLOCK';
+    else
+      result = 'KICK';
     return chain;
   }
-
   chain.end = function () {
     return result;
   };
-
   return chain;
 };

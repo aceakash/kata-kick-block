@@ -11,7 +11,6 @@ describe('darkRoom', function () {
 
   it('returns a function with an "end" function', function () {
     var returnedFunction = darkRoom();
-
     expect(typeof returnedFunction.end).toBe('function');
   });
 
@@ -67,6 +66,7 @@ describe('darkRoom', function () {
     expect(result).toBe('KICK');
 
     result = darkRoom(2)(1)(1)(1)(1)(1)(1)(1)(1).end();
-    expect(result).toBe('KICK');  });
+    expect(result).toBe('KICK');
+  });
 
 });

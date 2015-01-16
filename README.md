@@ -31,3 +31,8 @@ Run `npm install` and then `npm test` to run the tests
 
 ###Kata source
 http://www.codewars.com/kata/528aa29bd8a0399fc5000cae
+
+
+##Build Status
+![Build status](https://codeship.com/projects/dc4d2450-7fd5-0132-a98e-66b1976afe6a/status?branch=master)
+

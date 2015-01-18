@@ -17,7 +17,7 @@ module.exports = function (expectedIn) {
   }
 
   chain.end = function () {
-    return result || BLOCK;
+    return result || KICK;
   };
   return chain;
 };

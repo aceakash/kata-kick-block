@@ -58,7 +58,7 @@ describe('darkRoom', function () {
     expect(result).toBe('KICK');
   });
 
-  it('returns KICK when there is no block', function () {
+    it('returns KICK when there is no block', function () {
     var result = darkRoom(2)()()().end();
     expect(result).toBe('KICK');
   });
